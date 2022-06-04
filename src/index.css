@@ -2,23 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .nav-link {
+    @apply ml-8 text-white font-normal font-mono uppercase hover:text-sky-600 transition-all ease-linear;
+  }
 
-.nav-link{
-  @apply ml-8 text-white font-normal font-mono uppercase hover:text-sky-600 transition-all ease-linear
-}
+  .btn {
+    @apply inline-block py-3 px-5 capitalize bg-gray-600 text-white mt-8 hover:bg-sky-600 transition-all ease-linear;
+  }
 
-.btn{
-  @apply inline-block py-3 px-5 capitalize bg-gray-600 text-white mt-8 hover:bg-sky-600 transition-all ease-linear
-}
+  .common_head {
+    @apply text-3xl text-gray-600 font-semibold mb-4 capitalize text-center;
+  }
 
-.common_head{
-    @apply text-3xl text-gray-600 font-semibold mb-4 capitalize text-center
-}
+  .p_text {
+    @apply text-base text-gray-800;
+  }
 
-.p_text{
-    @apply text-base text-gray-800 
-}
-
-.secondary_head{
-    @apply mb-4 capitalize text-2xl font-normal text-gray-800
+  .secondary_head {
+    @apply mb-4 capitalize text-2xl font-normal text-gray-800;
+  }
 }

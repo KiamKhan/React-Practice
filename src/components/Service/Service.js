@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Services extends Component {
   render() {
     return (
-      <section className='mt-16 bg-slate-100'>
+      <section className=' bg-slate-100 py-16'>
           <div className='lg:container mx-auto'>
               <div>
                 <h3 className='common_head'>our services</h3>

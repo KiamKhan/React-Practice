@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import Increament from '../CounterUp/Increament'
 import Layout from '../Layout/Layout'
 import Services from '../Service/Service'
-import { Link } from 'react-router-dom'
 
 export default class Home extends Component {
   render() {
@@ -16,7 +17,7 @@ export default class Home extends Component {
               </div>
           </section>
 
-          <section className='mt-16'>
+          <section className='py-16'>
             <div className='lg:container mx-auto'>
               <div className='text-center'>
                 <h3 className='common_head'>About us</h3>
@@ -26,7 +27,10 @@ export default class Home extends Component {
               </div>
             </div>
           </section>
+          
           <Services/>
+
+          <Increament/>
         </Layout>
     )
     
