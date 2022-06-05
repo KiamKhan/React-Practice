@@ -22,4 +22,8 @@
   .secondary_head {
     @apply mb-4 capitalize text-2xl font-normal text-gray-800;
   }
+
+  .input {
+    @apply focus:outline-none border-b border-black text-lg py-1 pl-2;
+  }
 }
