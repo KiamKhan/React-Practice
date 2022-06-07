@@ -24,6 +24,10 @@
   }
 
   .input {
-    @apply focus:outline-none border-b border-black text-lg py-1 pl-2;
+    @apply bg-transparent focus:outline-none border-b border-black text-lg py-1 pl-2;
+  }
+
+  .increament_btn {
+    @apply text-white font-semibold py-4 px-8 bg-red-400 cursor-pointer rounded mt-4 mx-1;
   }
 }

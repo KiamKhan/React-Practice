@@ -26,8 +26,8 @@ export default class Increament extends Component {
         <h1 className='common_head'>Counter</h1>
         <p className='p_text capitalize'>value: {this.state.value}</p>
         <div>
-            <button onClick={this.increase} className='text-white font-semibold py-4 px-8 bg-red-400 cursor-pointer rounded mt-4 mx-1'>Increase</button>
-            <button onClick={this.decrease} className='text-white font-semibold py-4 px-8 bg-red-400 cursor-pointer rounded mt-4 mx-1'>Decrease</button>
+            <button onClick={this.increase} className='increament_btn'>Increase</button>
+            <button onClick={this.decrease} className='increament_btn'>Decrease</button>
         </div>
       </section>
     )

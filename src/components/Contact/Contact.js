@@ -13,7 +13,6 @@ export default class Contact extends Component {
     }
 
     handleInput = e => {
-        console.log(e.target.value)
 
         this.setState(state =>{
             return {
@@ -28,6 +27,10 @@ export default class Contact extends Component {
         this.setState(state =>{
             return{
                 full_name: state.fname + ' ' + state.lname,
+                fname: '',
+                lname: '',
+                // [e.target.name]: '',
+                // [e.target.value]: '',
             }
         })
     }
@@ -37,11 +40,11 @@ export default class Contact extends Component {
           <section className='h-screen flex items-center justify-center'>
             <div className='form_container w-96'>
                 <form onSubmit={this.submit} className="w-full">
-                    <h2 className='text-center common_head'>Login</h2>
+                    <h2 className='text-center common_head'>Contact</h2>
                     <label className='block text-lg'>Enter your name</label>
                     <div className='flex mt-8'>
-                        <input name='fname' onChange={e => {this.handleInput(e)}} value={this.state.fname} className='mr-4 input' type="text" placeholder='First name'/>
-                        <input name='lname' onChange={e => {this.handleInput(e)}} value={this.state.lname}  className='input' type="text" placeholder='Last Name'/>
+                        <input name='fname' value={this.state.fname} onChange={this.handleInput} className='mr-4 input' type="text" placeholder='First name'/>
+                        <input name='lname' value={this.state.lname} onChange={this.handleInput}  className='input' type="text" placeholder='Last Name'/>
                     </div>
 
                     <button className='btn mx-auto block mt-12'>Submit</button>

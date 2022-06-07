@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Increament from '../CounterUp/Increament'
 import Layout from '../Layout/Layout'
 import Services from '../Service/Service'
+import User from '../User/User'
 
 export default class Home extends Component {
   render() {
@@ -31,6 +32,8 @@ export default class Home extends Component {
           <Services/>
 
           <Increament/>
+
+          <User/>
         </Layout>
     )
     
