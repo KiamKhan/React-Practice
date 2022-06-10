@@ -14,11 +14,19 @@ export default class Increament extends Component {
     }
 
     decrease = () => {
-       this.setState((state, props) => {
-           return {
-               value: state.value - 10,
-           }
-       })
+       if(this.state.value !== 0){
+        this.setState( state => {
+            return {
+                value: state.value - 10,
+            }
+        })
+       } else{
+           this.setState( () => {
+               return{
+                   value: 0
+               }
+           })
+       }
     }
   render() {
     return (

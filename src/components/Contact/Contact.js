@@ -13,7 +13,7 @@ export default class Contact extends Component {
   }
 
   handleInput = (e) => {
-    this.setState((state) => {
+    this.setState(() => {
       return {
         [e.target.name]: e.target.value,
       };
