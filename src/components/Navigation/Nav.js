@@ -12,7 +12,7 @@ export default class MainMenu extends Component {
                       <li><Link className='nav-link' to='/'>Home</Link></li>
                       <li><Link className='nav-link' to='/about'>About</Link></li>
                       <li><Link className='nav-link' to='#'>Services</Link></li>
-                      <li><Link className='nav-link' to='#'>Portfolio</Link></li>
+                      <li><Link className='nav-link' to='/blog'>Blog</Link></li>
                       <li><Link className='nav-link' to='#'>Journal</Link></li>
                       <li><Link className='nav-link' to='/contact'>sign up</Link></li>
                   </ul>

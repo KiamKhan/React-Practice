@@ -10,6 +10,7 @@ export default class Contact extends Component {
       lname: "",
       full_name: "",
       gender: "",
+      inputGender: '',
     };
   }
 
@@ -29,7 +30,7 @@ export default class Contact extends Component {
         full_name: state.fname + " " + state.lname,
         fname: "",
         lname: "",
-        gender: e.target.value
+        inputGender: state.gender
         // [e.target.name]: '',
         // [e.target.value]: '',
       };
@@ -83,7 +84,7 @@ export default class Contact extends Component {
             </p>
 
             <p className="mt-2 text-2xl text-black">Gender: <span className="text-[#353535] text-xl capitalize ml-2">
-                    {this.state.gender}
+                    {this.state.inputGender}
                 </span></p>
           </div>
         </section>
