@@ -8,12 +8,13 @@ export default class Blog extends Component {
         super(props)
 
         this.state = {
-            post: []
+            post: [],
+            error: ""
         }
     }
 
-    componentDidMount = () => {
-        axios.get('https://jsonplaceholder.typicode.com/posts').then( response =>{
+    componentDidMount() {
+        axios.get('https://jsonplaceholder.typicode.com/postsall').then( response =>{
             if(response.status === 200){
                 this.setState(() =>{
                     return{
@@ -23,6 +24,13 @@ export default class Blog extends Component {
             } else{
                 // something here
             }
+        }).catch((e) =>{
+            this.setState(() =>{
+                return{
+                    error: e.message
+                }
+            })
+            console.log(e)
         })
     }
 
@@ -37,12 +45,15 @@ export default class Blog extends Component {
 
         <section className='py-16'>
             <div className='lg:container mx-auto'>
+
+                {this.state.error ? this.state.error : ''}
+
                 {this.state.post.map(post =>{
                     return(
                         <Link
                                 key={post.id}
                                 to={'/'}
-                                className='w-full block px-4 py-4 bg-gray-100 rounded my-2 text-center'
+                                className='w-full block px-4 py-4 bg-gray-100 rounded my-4 text-center'
                         > {post.title} </Link>
                     )
                 })}
