@@ -7,14 +7,17 @@ export default class User extends Component {
         this.state = {
             name: '',
             age: '',
-            country: ''
+            country: '',
+            fullName: '',
+            inputAge: '',
+            inputC: '',
         }
     }
 
     handleInput = e =>{
-        this.setState((state) =>{
-            return {
-              [e.target.name]: e.target.value
+        this.setState(() =>{
+            return{
+                [e.target.name]: e.target.value           
             }
         })
     }
@@ -22,7 +25,19 @@ export default class User extends Component {
     updateAge = newAge => {
         this.setState(state => {
             return{
-                age: newAge
+                inputAge: newAge
+            }
+        })
+    }
+
+    submit = e =>{
+        e.preventDefault();
+
+        this.setState( state => {
+            return{
+                fullName: state.name,
+                inputAge: state.age,
+                inputC: state.country
             }
         })
     }
@@ -35,16 +50,17 @@ export default class User extends Component {
                 User Info
             </h1>
 
-            <div className='my-8'>
+            <form onSubmit={this.submit} className='my-8'>
                 <input onChange={this.handleInput} name='name' type="text" value={this.state.name} placeholder="Enter your name" className='input'/>
                 <input onChange={this.handleInput} name='age' type="number" value={this.state.age} placeholder="Enter your age" className='input mx-4'/>
                 <input onChange={this.handleInput} name='country' type="text" value={this.state.country} placeholder="Country" className='input'/>
-            </div>
+                <button className='btn block mx-auto'>Submit</button>
+            </form>
 
             <div>
-                <p className='capitalize'>Name: {this.state.name}</p>
-                <p>Age: {this.state.age}</p>
-                <p className='capitalize'>Country: {this.state.country}</p>
+                <p className='capitalize'>Name: {this.state.fullName}</p>
+                <p>Age: {this.state.inputAge}</p>
+                <p className='capitalize'>Country: {this.state.inputC}</p>
             </div>
 
             <button onClick={() => {this.updateAge(50)}} className='btn'>update age to 50</button>

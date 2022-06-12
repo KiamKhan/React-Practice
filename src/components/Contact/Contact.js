@@ -9,6 +9,7 @@ export default class Contact extends Component {
       fname: "",
       lname: "",
       full_name: "",
+      gender: "",
     };
   }
 
@@ -28,6 +29,7 @@ export default class Contact extends Component {
         full_name: state.fname + " " + state.lname,
         fname: "",
         lname: "",
+        gender: e.target.value
         // [e.target.name]: '',
         // [e.target.value]: '',
       };
@@ -39,8 +41,8 @@ export default class Contact extends Component {
         <section className="h-screen flex items-center justify-center">
           <div className="form_container w-96">
             <form onSubmit={this.submit} className="w-full">
-              <h2 className="text-center common_head">Contact</h2>
-              <label className="block text-lg">Enter your name</label>
+              <h2 className="text-center common_head">Sign Up</h2>
+              
               <div className="flex mt-8">
                 <input
                   name="fname"
@@ -60,15 +62,29 @@ export default class Contact extends Component {
                 />
               </div>
 
+              <label className="block mt-4">Gender:</label>  
+              <div className="mt-2 w-2/6 flex justify-between">
+                <label><input onChange={this.handleInput} type="radio" name="gender" value={'male'}/> Male</label>
+                <label><input onChange={this.handleInput} type="radio" name="gender" value={'female'}/> Female</label>
+              </div>
+
+              <div>
+                
+              </div>
+
               <button className="btn mx-auto block mt-12">Submit</button>
             </form>
 
             <p className="mt-16 text-2xl text-black">
-              Full name:{" "}
-              <span className="text-[#353535] capitalize">
+              Full name: {' '}
+              <span className="text-[#353535] text-xl capitalize ml-2">
                 {this.state.full_name}
               </span>
             </p>
+
+            <p className="mt-2 text-2xl text-black">Gender: <span className="text-[#353535] text-xl capitalize ml-2">
+                    {this.state.gender}
+                </span></p>
           </div>
         </section>
       </Layout>
