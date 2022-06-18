@@ -5,7 +5,7 @@ export default class MainMenu extends Component {
   render() {
     return (
       <nav className='absolute top-0 left-0 w-full bg-black/60 py-9 z-50'>
-          <div className='lg:container mx-auto flex'>
+          <div className='sm:container mx-auto flex'>
               <div className='basis-1/4'><Link className='inline-block text-white font-bold text-3xl' to='/'>Logo</Link></div>
               <div className='basis-3/4'>
                   <ul className='flex justify-end'>

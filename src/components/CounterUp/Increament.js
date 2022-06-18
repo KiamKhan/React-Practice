@@ -30,7 +30,7 @@ export default class Increament extends Component {
     }
   render() {
     return (
-      <section className='lg:container mx-auto text-center py-16'>
+      <section className='sm:container mx-auto text-center py-16'>
         <h1 className='common_head'>Counter</h1>
         <p className='p_text capitalize'>value: {this.state.value}</p>
         <div>

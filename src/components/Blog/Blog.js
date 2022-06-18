@@ -44,7 +44,7 @@ export default class Blog extends Component {
         </section>
 
         <section className='py-16'>
-            <div className='lg:container mx-auto'>
+            <div className='sm:container mx-auto'>
 
                 {this.state.error ? this.state.error : null}
 

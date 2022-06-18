@@ -10,7 +10,7 @@ export default class Home extends Component {
     return (
       <Layout>
         <section className="bg-sky-600 py-80 w-full">
-          <div className="lg:container mx-auto flex justify-center">
+          <div className="sm:container mx-auto flex justify-center">
             <div className="text-white text-center">
               <h1 className="text-4xl mb-2">Hello World!</h1>
               <p className="text-2xl text-gray-800">First time using react</p>
@@ -19,7 +19,7 @@ export default class Home extends Component {
         </section>
 
         <section className="py-16">
-          <div className="lg:container mx-auto">
+          <div className="sm:container mx-auto">
             <div className="text-center">
               <h3 className="common_head">About us</h3>
               <p className="p_text">

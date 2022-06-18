@@ -6,7 +6,7 @@ export default class About extends Component {
     return (
       <Layout>
         <section className="py-60 bg-slate-100">
-          <div className="lg:container mx-auto">
+          <div className="sm:container mx-auto">
             <div>
               <h2 className="text-4xl font-bold text-gray-600 capitalize mb-4 text-center ">
                 about us

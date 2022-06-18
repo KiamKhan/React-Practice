@@ -45,15 +45,15 @@ export default class User extends Component {
   render() {
     return (
       <section className='text-center py-16 bg-slate-100'>
-        <div className='lg:container mx-auto'>
+        <div className='sm:container mx-auto'>
             <h1 className='common_head'>
                 User Info
             </h1>
 
             <form onSubmit={this.submit} className='my-8'>
                 <input onChange={this.handleInput} name='name' type="text" value={this.state.name} placeholder="Enter your name" className='input'/>
-                <input onChange={this.handleInput} name='age' type="number" value={this.state.age} placeholder="Enter your age" className='input mx-4'/>
-                <input onChange={this.handleInput} name='country' type="text" value={this.state.country} placeholder="Country" className='input'/>
+                <input onChange={this.handleInput} name='age' type="number" value={this.state.age} placeholder="Enter your age" className='input mx-4 mt-4 sm:mt-0'/>
+                <input onChange={this.handleInput} name='country' type="text" value={this.state.country} placeholder="Country" className='input mt-4 md:mt-0'/>
                 <button className='btn block mx-auto'>Submit</button>
             </form>
 
