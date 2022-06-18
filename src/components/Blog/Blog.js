@@ -14,7 +14,7 @@ export default class Blog extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://jsonplaceholder.typicode.com/postsall').then( response =>{
+        axios.get('https://jsonplaceholder.typicode.com/posts').then( response =>{
             if(response.status === 200){
                 this.setState(() =>{
                     return{
@@ -46,13 +46,13 @@ export default class Blog extends Component {
         <section className='py-16'>
             <div className='lg:container mx-auto'>
 
-                {this.state.error ? this.state.error : ''}
+                {this.state.error ? this.state.error : null}
 
                 {this.state.post.map(post =>{
                     return(
                         <Link
                                 key={post.id}
-                                to={'/'}
+                                to={`/blog/${post.id}`}
                                 className='w-full block px-4 py-4 bg-gray-100 rounded my-4 text-center'
                         > {post.title} </Link>
                     )
